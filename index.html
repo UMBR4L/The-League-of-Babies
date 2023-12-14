@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../styles/index.css" />
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="./scripts/main.js" type="module"></script>
+    <script defer src="./scripts/champion.js" type="module"></script>
+    <script defer src="./scripts/dalle-api.js" type="module"></script>
+    <title>League of Babies</title>
+  </head>
+  <body>
+    <header>
+      <h1>THE LEAGUE OF BABIES</h1>
+    </header>
+    <main>
+      <!-- Select Parents -->
+      <form id="champForm">
+        <section>
+          <h2>SELECT CHAMPION</h2>
+          <div class="champ-tiles__container">
+            <input type="radio" value="Aatrox" name="champName" />
+          </div>
+          <button type="submit">Create Legendary Baby</button>
+        </section>
+      </form>
+
+      <!-- BABY -->
+      <section>
+        <h2>Their baby:</h2>
+        <img />
+      </section>
+    </main>
+  </body>
+</html>

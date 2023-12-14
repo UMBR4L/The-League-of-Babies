@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+.champ-tiles__container {
+  margin: 3%;
+  background-color: lightcyan;
+  display: flex;
+  flex-wrap: wrap;
+}
+.champ-tiles__pic {
+  width: 5rem;
+  height: 5rem;
+  border: 1px solid red;
+  background-size: contain;
+}
+.champ-tiles__pic:hover {
+  transform: scale(1.05);
+}
+.champ-tiles__checkbox {
+  display: none;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=index.css.map */

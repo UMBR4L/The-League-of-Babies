@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}/*# sourceMappingURL=global.css.map */
