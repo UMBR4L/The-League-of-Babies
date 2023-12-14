@@ -12,25 +12,25 @@
     <title>League of Babies</title>
   </head>
   <body>
-    <header>
-      <h1>THE LEAGUE OF BABIES</h1>
+    <header class="title-box">
+      <h1 class="title-box__title">THE LEAGUE OF <span class="title-box__title--babies">BABIES</span></span></h1>
     </header>
     <main>
       <!-- Select Parents -->
       <form id="champForm">
-        <section>
-          <h2>SELECT CHAMPION</h2>
+        <section class="champ-select">
+          <h2 class="champ-select__heading">SELECT 2 CHAMPIONS</h2>
           <div class="champ-tiles__container">
-            <input type="radio" value="Aatrox" name="champName" />
+            <!-- <input type="radio" value="Aatrox" name="champName" /> -->
           </div>
-          <button type="submit">Create Legendary Baby</button>
+          <button class="champ-submit" type="submit">Create Legendary Baby</button>
         </section>
       </form>
 
       <!-- BABY -->
-      <section>
-        <h2>Their baby:</h2>
-        <img />
+      <section class="baby-section">
+        <h2 class="baby-section__heading">Their baby:</h2>
+        <img src="" alt="deformed baby" class="merge-result"/>
       </section>
     </main>
   </body>

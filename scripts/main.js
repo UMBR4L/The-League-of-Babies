@@ -1,5 +1,6 @@
 import champions from "./champion.js";
 import DalleApi from "./dalle-api.js";
+import champDesc from "./champ-descs.js";
 
 const champSelector = document.querySelector(".champ-tiles__container");
 let numCheckedBox = 0;
@@ -7,11 +8,9 @@ let numCheckedBox = 0;
 const dalleApi = new DalleApi();
 
 const mergeChamp = async (champ1, champ2, champ1Desc, champ2Desc) =>{
-  
   const mergedChamp = await dalleApi.createImage(champ1, champ2, champ1Desc, champ2Desc);
+  return mergedChamp;
 }
-
-mergeChamp("Ahri","Aatrox", "nine-tailed fox", "The Dark Blade");
 
 for (const champ in champions) {
   const champion = champions[champ];
@@ -61,14 +60,29 @@ keys.forEach((key, i) => {
 
 async function submitHandler(e) {
   e.preventDefault();
-  const response = await dalleApi.createImage({
-    model: "dall-e-3",
-    prompt: "a white siamese cat",
-    n: 1,
-    size: "1024x1024",
-  });
-  image_url = response.data.data[0].url;
-  // console.log("Form submitted");
+//   const response = await DalleApi.createImage({
+//     model: "dall-e-3",
+//     prompt: "a white siamese cat",
+//     n: 1,
+//     size: "1024x1024",
+//   });
+//   image_url = response.data.data[0].url;
+const checkedBoxes = e.target.querySelectorAll('input[type="checkbox"]:checked');
+const checkedBoxesArray = [...checkedBoxes];
+    const mergedImage = document.querySelector(".merge-result");
+    
+        // console.log(await mergeChamp(
+        //   checkedBoxesArray[0].id,
+        //   checkedBoxesArray[1].id
+        // ));
+        const firstChamp =  checkedBoxesArray[0].id;
+        const secondChamp = checkedBoxesArray[1].id;
+    mergedImage.src = await mergeChamp(
+      firstChamp,
+      secondChamp.id,
+      champDesc.firstChamp,
+      champDesc.secondChamp
+    );
 }
 
 const form = document.getElementById("champForm");

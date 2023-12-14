@@ -1,28 +1,73 @@
-@use './global.scss' as *;
+@use "./global.scss" as *;
 
+.title-box {
+  display: flex;
+  justify-content: center;
+  height: 40vw;
+  align-items: center;
+  width: 100%;
+  background-color: lightpink;
+
+  &__title {
+    font-family: cursive;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 130%;
+    color: lightskyblue;
+    &--babies {
+      font-size: 2em;
+      color: lightcoral;
+    }
+  }
+    }
+
+.champ-select {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgoldenrodyellow;
+    &__heading {
+        text-align: center;
+        font-size: 2rem;
+    }
+}
 
 .champ-tiles {
-
-    &__container {
-        margin: 3%;
-        background-color: lightcyan;
-        display: flex;
-        flex-wrap: wrap;
+  &__container {
+    margin: 3%;
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__pic {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid red;
+    &:hover {
+      transform: scale(1.05);
     }
-    &__pic{
-        width: 5rem;
-        height: 5rem;
-        border: 1px solid red;
-        &:hover {
-            transform: scale(1.05);
-        }
-        background-size: contain;
-
-    }
-&__checkbox {
-    display:none;
+    background-size: contain;
+  }
+  &__checkbox {
+    display: none;
     width: 100%;
     height: 100%;
-
+  }
 }
+
+.baby-section {
+    background-color: black;
+    &__heading {
+        text-align: center;
+        font-size: 2rem;
+        color: gold
+    }
+}
+
+.merge-result {
+}
+
+.champ-submit {
+  width: 100%;
+  background-color: aqua;
+  height: 150px;
 }
